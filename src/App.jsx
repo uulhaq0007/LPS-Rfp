@@ -5,7 +5,7 @@ import AuthPage from './pages/AuthPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <AuthLayout>
         <AuthPage />
       </AuthLayout>

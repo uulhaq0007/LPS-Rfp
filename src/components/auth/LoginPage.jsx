@@ -10,7 +10,7 @@ import {
   Avatar,
 } from "@mui/material";
 import DescriptionIcon from "@mui/icons-material/Description";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link as RouterLink } from "react-router-dom";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -126,7 +126,8 @@ const LoginPage = () => {
                     mb: 1.5,
                   }}>
                   <Link
-                    href='/forgot-password'
+                    component={RouterLink}
+                    to='/forgot-password'
                     underline='hover'
                     fontSize={12}>
                     Forgot Password?
